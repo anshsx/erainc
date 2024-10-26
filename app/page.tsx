@@ -152,19 +152,26 @@ export default function Component() {
       </header>
 
       <div className={`fixed inset-0 bg-[#0D50FF] z-40 flex items-center justify-center transition-opacity duration-300 ${menuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-        <nav className="text-center">
-          {['VALUES', 'CONTACT', 'CAREERS', 'TWITTER', 'NEWSLETTER', 'GET ARC'].map((item, index) => (
-            <Link 
-              key={index} 
-              href="#" 
-              className={`block py-2 text-lg md:text-xl lg:text-2xl ${item === 'GET ARC' ? 'text-white' : 'text-gray-300'} hover:text-white transition-colors`}
-              onClick={() => setMenuOpen(false)}
-            >
-              {item}
-            </Link>
-          ))}
-        </nav>
-      </div>
+  <nav className="text-center">
+    {['VALUES', 'CONTACT', 'CAREERS', 'INSTAGRAM', 'NEWSLETTER', 'GET ARC'].map((item, index) => (
+      <Link 
+        key={index} 
+        href={[
+          'https://era-nine.vercel.app/about.html', // VALUES
+          'mailto:erasearch.co@gmail.com?subject=Contact', // CONTACT
+          '/careers', // CAREERS (you can change the link accordingly)
+          'https://instagram.com/erasearch', // INSTAGRAM (changed from TWITTER)
+          'https://newsletterera.vercel.app/', // NEWSLETTER
+          'https://play.google.com/store/apps/details?id=com.erainc.era' // GET ARC
+        ][index]} 
+        className={`block py-2 text-lg md:text-xl lg:text-2xl ${item === 'GET ARC' ? 'text-white' : 'text-gray-300'} hover:text-white transition-colors`}
+        onClick={() => setMenuOpen(false)}
+      >
+        {item}
+      </Link>
+    ))}
+  </nav>
+</div>
 
       <main className="flex-grow flex flex-col justify-center items-center px-10 md:px-20 lg:px-40 relative">
         <div className={`w-full ${screens[currentScreen].buttonWidth || ''} ${screens[currentScreen].centerText ? 'text-center' : 'text-left'}`}>
