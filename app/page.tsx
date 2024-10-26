@@ -98,7 +98,7 @@ export default function Component() {
     {
       text: (
         <>
-          Otherwise, feel free to <span className="bg-[#4C7DF6] text-white px-1 py-1 rounded hover:bg-blue-500 transition-colors cursor-pointer underline">join our friends and family newsletter</span>, and we promise you&apos;ll be among the first to play with our new browser.
+          Otherwise, feel free to <Link href="https://newsletterera.vercel.app/" passHref><span className="bg-[#4C7DF6] text-white px-1 py-1 rounded hover:bg-blue-500 transition-colors cursor-pointer underline">join our friends and family newsletter</span> </Link>, and we promise you&apos;ll be among the first to play with our new browser.
         </>
       ),
       bgColor: 'bg-[#0D50FF]',
@@ -115,7 +115,7 @@ export default function Component() {
       text: (
         <>
           <Link href="https://era-nine.vercel.app/policy.html" className="block underline mb-2">Privacy Policy</Link>
-          <Link href="/security" className="block underline mb-2">Security</Link>
+          <Link href="https://era-nine.vercel.app/security.html" className="block underline mb-2">Security</Link>
           <span className="block">Hi there :)</span>
         </>
       ),
