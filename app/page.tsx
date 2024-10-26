@@ -153,13 +153,13 @@ export default function Component() {
 
       <div className={`fixed inset-0 bg-[#0D50FF] z-40 flex items-center justify-center transition-opacity duration-300 ${menuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
   <nav className="text-center">
-    {['VALUES', 'CONTACT', 'CAREERS', 'INSTAGRAM', 'NEWSLETTER', 'GET ARC'].map((item, index) => (
+    {['VALUES', 'CONTACT', 'INSTAGRAM', 'NEWSLETTER', 'GET ARC'].map((item, index) => (
       <Link 
         key={index} 
         href={[
           'https://era-nine.vercel.app/about.html', // VALUES
           'mailto:erasearch.co@gmail.com?subject=Contact', // CONTACT
-          '/careers', // CAREERS (you can change the link accordingly)
+          // CAREERS (you can change the link accordingly)
           'https://instagram.com/erasearch', // INSTAGRAM (changed from TWITTER)
           'https://newsletterera.vercel.app/', // NEWSLETTER
           'https://play.google.com/store/apps/details?id=com.erainc.era' // GET ARC
